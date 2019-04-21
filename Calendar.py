@@ -4,6 +4,9 @@ class Calendar:
 		self.description=description
 		self.user=user
 
+	def loadDateData(date):
+	def addEventToListOfEvents():
+
 class Event:
 	def __init__(self,evType,color,title,description,date):
 		self.evType=evType
@@ -11,6 +14,8 @@ class Event:
 		self.title=title
 		self.description=description
 		self.date=date
+
+	def createEventObject():
 
 
 class Period(Event):
@@ -50,7 +55,3 @@ class Appointment(Event):
 		self.symptoms=symptoms
 		self.appointOrderer=appointOrderer
 		self.severity=severity
-	    
-	
-	
-

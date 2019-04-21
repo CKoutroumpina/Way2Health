@@ -2,7 +2,14 @@
 class Sensor:
 	def __init__(self,user,sensID):
 		self.user=user
-		self.sensID
+		self.sensID = sensID
+
+	def inputSamplig():
+	def refreshCache():
+	def generateCacheAv():
+	def cacheAvSavePerSixH():
+	def inputCacheDifCalc():
+	def difSave():
 	
 class BodySensor(Sensor):
 	def __init__(self,user,sensID):
@@ -18,6 +25,7 @@ class BloodSensor(BodySensor):
 		self.spO2=spO2
 		self.spO2Stat=spO2Stat
 
+	def readValues():
 
 class GeneralSensor(BodySensor):
 	def __init__(self,bt,btStat,skinRespiration,skinRespStat,user,sensID):
@@ -27,6 +35,9 @@ class GeneralSensor(BodySensor):
 		self.skinRespiration=skinRespiration
 		self.skinRespStat
 
+	def readValues():
+
+
 class RespiratorySensor(BodySensor):
 	def __init__(self,rp,rpStat,respirationSounds,respiSoundsStat,user,sensID):
 		BodySensor.__init__(self,user,sensID):
@@ -34,6 +45,8 @@ class RespiratorySensor(BodySensor):
 		self.rpStat=rpStat
 		self.respirationSounds=respirationSounds
 		self.respiSoundsStat=respiSoundsStat
+
+	def readValues():
 
 class CardiacSensor(BodySensor):
 	def __init__(self,ecg,ecgStat,hr,hrStat,sysBP,sysBPStat,diaBP,diaBPStat,user,sensID):
@@ -46,6 +59,9 @@ class CardiacSensor(BodySensor):
 		self.sysBPStat=sysBPStat
 		self.diaBP=diaBP
 		self.diaBPStat=diaBPStat
+
+	def readValues():
+
 
 class EnvironmentalSensor(Sensor):
 	def __init__(self,user,sensID,temp,humidity,co,co2,radon,formaldehyde,airMold,asbesto,airParticles,light):
@@ -61,9 +77,12 @@ class EnvironmentalSensor(Sensor):
 		self.airParticles=airParticles
 		self.light=light
 
+
 class CurrentStatus:
 	def __init__(bloodSensor,skinSensor,respiratorySensor,cardiacSensor):
 		self.bloodSensor=bloodSensor
 		self.skinSensor=skinSensor
 		self.respiratorySensor=respiratorySensor
 		self.cardiacSensor=cardiacSensor
+
+	def getNewValues():
